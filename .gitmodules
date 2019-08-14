@@ -1,0 +1,4 @@
+[submodule "CodeVerse"]
+	path = CodeVerse
+	url = https://github.com/HebelHuber/CodeVerse.git
+	branch = master

@@ -8,6 +8,8 @@ namespace CodeVerse.ClientConnector.Tester
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+
+            new ClientConnector();
         }
     }
 }

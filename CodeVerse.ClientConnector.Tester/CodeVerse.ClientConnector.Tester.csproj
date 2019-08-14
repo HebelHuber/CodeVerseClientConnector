@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CodeVerse.ClientConnector\CodeVerse.ClientConnector.csproj" />
+    <ProjectReference Include="..\CodeVerse\CodeVerse.Common\CodeVerse.Common.csproj" />
   </ItemGroup>
 
 </Project>
