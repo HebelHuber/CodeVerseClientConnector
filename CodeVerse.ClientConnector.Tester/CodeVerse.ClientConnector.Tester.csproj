@@ -6,4 +6,8 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CodeVerse.ClientConnector\CodeVerse.ClientConnector.csproj" />
+  </ItemGroup>
+
 </Project>
