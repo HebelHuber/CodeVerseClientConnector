@@ -1,6 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net.Sockets;
-using CodeVerse.ClientConnector;
 
 namespace CodeVerse.ClientConnector.Tester
 {
@@ -8,15 +8,17 @@ namespace CodeVerse.ClientConnector.Tester
     {
         static void Main(string[] args)
         {
-            TcpClient client = new TcpClient("localhost",1337);
-
-            for (int i = 0; i < 10; i++)
+            List<TcpClient> clients = new List<TcpClient>();
+            for (int i = 0; i < 2; i++)
             {
-                System.Threading.Thread.Sleep(1000);
-                byte[] _msg = System.Text.Encoding.UTF8.GetBytes("HELLO WORLD!");
-                client.GetStream().Write(_msg, 0, _msg.Length);
+                clients.Add(new TcpClient("localhost", 45385));
             }
-            client.Close();
+            Console.WriteLine("Press key to exit...");
+            Console.ReadKey();
+            foreach (var client in clients)
+            {
+                client.Close();
+            }
         }
     }
 }
